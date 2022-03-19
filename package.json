@@ -1,15 +1,15 @@
 {
   "name": "typescript-2048",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Classic game of 2048 rewritten in Typescript.",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "build": "tsc --project ./",
-    "app": "node app.js"
+    "app": "node main.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Typescript", "Javascript", "HTML", "CSS", "2048", "Game"],
+  "author": "Damjan Sudarevic",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.21",
