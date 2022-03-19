@@ -1,4 +1,3 @@
-"use strict";
 var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -11,8 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Tile_tileElement, _Tile_x, _Tile_y, _Tile_value;
-Object.defineProperty(exports, "__esModule", { value: true });
-class Tile {
+export default class Tile {
     constructor(tileContainer, value = Math.random() > .5 ? 2 : 4) {
         _Tile_tileElement.set(this, void 0);
         _Tile_x.set(this, 0);
@@ -52,5 +50,4 @@ class Tile {
         });
     }
 }
-exports.default = Tile;
 _Tile_tileElement = new WeakMap(), _Tile_x = new WeakMap(), _Tile_y = new WeakMap(), _Tile_value = new WeakMap();

@@ -1,4 +1,3 @@
-"use strict";
 var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -11,11 +10,10 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Grid_instances, _Grid_CELLS, _Grid_emptyCells_get, _Cell_cellElement, _Cell_x, _Cell_y, _Cell_tile, _Cell_mergeTile;
-Object.defineProperty(exports, "__esModule", { value: true });
 const GRID_SIZE = 4;
 const CELL_SIZE = 16;
 const CELL_GAP = 2;
-class Grid {
+export default class Grid {
     constructor(gridElement) {
         _Grid_instances.add(this);
         _Grid_CELLS.set(this, void 0);
@@ -48,12 +46,11 @@ class Grid {
         return __classPrivateFieldGet(this, _Grid_instances, "a", _Grid_emptyCells_get)[randomIndex];
     }
 }
-exports.default = Grid;
 _Grid_CELLS = new WeakMap(), _Grid_instances = new WeakSet(), _Grid_emptyCells_get = function _Grid_emptyCells_get() {
     __classPrivateFieldGet(this, _Grid_CELLS, "f").filter(cell => cell.tile == null);
     return __classPrivateFieldGet(this, _Grid_CELLS, "f").filter(cell => cell.tile == null);
 };
-class Cell {
+export class Cell {
     constructor(cellElement, x, y) {
         _Cell_cellElement.set(this, void 0);
         _Cell_x.set(this, void 0);
